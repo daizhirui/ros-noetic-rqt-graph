@@ -4,7 +4,7 @@ url='https://wiki.ros.org/rqt_graph'
 pkgname='ros-noetic-rqt-graph'
 pkgver='0.4.14'
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -36,9 +36,10 @@ depends=(
     python-rospkg
 )
 
-_dir="rqt_graph-${pkgver}"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_graph/archive/${pkgver}.tar.gz")
-sha256sums=('2b5f6440cb826362043a35ac561151033688560bfe1b84fb2dd2533424b017bc')
+_commit="759e210ac03a9c19e3ed4040361f97499203191f"
+_dir="rqt_graph-${_commit}"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_graph/archive/${_commit}.tar.gz")
+sha256sums=('57d37b075d32522d8efc71285e314900c76e3bd0ee58c49aeed0833b5c7a9131')
 
 build() {
     # Use ROS environment variables.
